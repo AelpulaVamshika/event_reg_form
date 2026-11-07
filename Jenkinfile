@@ -1,0 +1,11 @@
+Pipeline(
+stages({
+stage("buid"){
+"echo building..."
+})
+stage("test")({
+"echo testing...."
+})
+stage("deploy")({
+"echo deploying...."
+})
