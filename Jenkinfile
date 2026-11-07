@@ -1,11 +1,23 @@
-Pipeline(
-stages({
-stage("buid"){
-"echo building..."
-})
-stage("test")({
-"echo testing...."
-})
-stage("deploy")({
-"echo deploying...."
-})
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'building...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'testing...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'deploying...'
+            }
+        }
+    }
+}
